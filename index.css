@@ -1,0 +1,144 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap");
+
+:root{
+    --grey-font: grey;
+    --white-font: white;
+    --eth-font: hsl(178, 100%, 50%);
+    --line-color: hsl(215, 32%, 27%);
+    --overlay-color: hsl(178, 100%, 50%);
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #0D192B;
+    font-family: "Outfit", sans-serif;
+}
+.container {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card{
+    height: 575.6px;
+    width: min(90%, 340px);
+    background-color: hsl(216, 50%, 16%);
+    border-radius: 15px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.image__container{
+    position: relative;
+    flex: 0.5;
+    height: 300px;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.image__container>img{
+    height: 100%;
+    border-radius: 10px;
+    margin-left: 6px;
+}
+
+.image__container:hover .overlay{
+   opacity: 0.5;
+}
+.overlay>img{
+    opacity: 1;
+}
+
+.overlay{
+    height: 100%;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: var(--overlay-color);
+    opacity: 0;
+    border-radius: 10px;
+}
+
+.card>img:hover{
+    color: #0D192B;
+}
+
+.card__text{
+    padding: 10px;
+    flex: 0.5;
+}
+
+.card__text>h2{
+    color: var(--white-font);
+    margin-bottom: 15px;
+    cursor: pointer;
+}
+
+.card__text>p{
+    color: var(--grey-font);
+}
+
+.eth__info {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 10px 0px;
+}
+
+.eth__price, .days__left {
+    display: flex;
+    align-items: center;
+}
+
+.eth__price>img, .days__left>img{
+    margin-right: 10px;
+}
+.eth__price{
+    color: var(--eth-font);
+}
+
+.days__left{
+    color: var(--grey-font);
+}
+
+.user__block {
+    border-top: 2px solid var(--line-color);
+    display: flex;
+    align-items: center;
+    padding-top: 20px;
+}
+
+.user__block>img{
+    height: 50px;
+    margin-right: 20px;
+    border: 1px solid var(--white-font);
+    border-radius: 50%;
+}
+
+.creation__text{
+    color: var(--grey-font);
+    margin-right: 5px;
+}
+
+.name{
+    color: var(--white-font);
+}
+
+.creator__name{
+    cursor: pointer;
+}
+.creator__name:hover, .card__text>h2:hover{
+    color: var(--eth-font);
+}
